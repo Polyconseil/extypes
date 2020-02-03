@@ -3,14 +3,11 @@
 # This code is distributed under the two-clause BSD License.
 
 
-from __future__ import absolute_import, unicode_literals
-
 import collections
 
 import django
 from django.db import models
 from django.forms import fields as forms_fields
-from django.utils import six
 from django.utils.itercompat import is_iterable
 
 import extypes
@@ -65,10 +62,10 @@ class SetField(models.Field):
         if isinstance(value, self.set_definition):
             return value
 
-        if value in (None, '', b''):
+        if value in (None, ''):
             value = ()
 
-        if isinstance(value, six.text_type):
+        if isinstance(value, str):
             value = value.split(self.db_separator)
 
         # Remove empty options
@@ -76,7 +73,7 @@ class SetField(models.Field):
 
         return self.set_definition(value)
 
-    def from_db_value(self, value, expression, connection, context):
+    def from_db_value(self, value, expression, connection):
         """Convert from the database format.
 
         This should be the inverse of self.get_prep_value()

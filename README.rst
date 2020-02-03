@@ -7,10 +7,10 @@ This project provides a few enhanced types for Python:
 * That's all for now.
 
 
-It also provides extensions for Django (1.7 - 1.10).
+It also provides extensions for Django (2.2 - 3.0).
 
 
-It has been fully tested with all versions of Python from 2.7 to 3.4; and is distributed under the BSD license.
+It has been fully tested with all versions of Python from 3.6 to 3.8; and is distributed under the BSD license.
 
 
 Links
@@ -117,7 +117,7 @@ But only valid options are accepted:
 Extensions: Django
 ------------------
 
-``extypes`` also provides custom fields for Django - compatible with Django 1.7 and upwards.
+``extypes`` also provides custom fields for Django - compatible with Django 2.2 and upwards.
 
 .. code-block:: python
 

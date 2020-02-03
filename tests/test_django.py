@@ -3,8 +3,6 @@
 # Copyright (c) 2014 Raphaël Barrois
 # This code is distributed under the two-clause BSD License.
 
-from __future__ import absolute_import, unicode_literals
-
 import unittest
 
 import extypes

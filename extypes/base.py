@@ -2,10 +2,6 @@
 # Copyright (c) 2014 Raphaël Barrois
 # This code is distributed under the two-clause BSD License.
 
-from __future__ import unicode_literals
-
-from . import compat
-
 
 def ConstrainedSet(choices, name=None):
     """A constrained set, where values are restricted to a set of options.
@@ -22,10 +18,7 @@ def ConstrainedSet(choices, name=None):
     of the allowed options.
     """
     if not name:
-        if compat.PY2:
-            name = b'ConstrainedSet'
-        else:
-            name = 'ConstrainedSet'
+        name = 'ConstrainedSet'
 
     return type(name, (BaseConstrainedSet,), {'name': name, 'choices': choices})
 
