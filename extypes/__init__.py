@@ -6,6 +6,6 @@ __version__ = '2.0.1.dev0'
 __author__ = 'Raphaël Barrois <raphael.barrois+extypes@polytechnique.org>'
 
 
-from .base import (  # noqa
+from .base import (  # noqa isort:skip
     ConstrainedSet,
 )
